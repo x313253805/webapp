@@ -1,0 +1,100 @@
+.register{
+	background-image:url(../image/background.png);
+	background-repeat: none;
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom:0;
+	form{
+		.mt(55);
+		.form-item{
+			font-size: 0;
+			.w(300);
+			.h(40);
+			.lh(40);
+			color:@defaultColor;
+			background-color: @inputBgColor;
+			margin-left: auto;
+			margin-right: auto;
+			&:first-child{
+				border-bottom: 1px solid @defaultColor;
+			}
+			.account{
+				background-image: url(../image/account.png);
+				background-repeat: no-repeat;
+				background-color: @iconBgColor;
+				background-position: 17px 10px;
+				.h(40);
+				.w(55);
+			}
+			.lock{
+				background-image: url(../image/lock.png);
+				background-repeat: no-repeat;
+				background-color: @iconBgColor;
+				background-position: 17px 10px;
+				.h(40);
+				.w(55);
+			}
+			input{
+				border-width: none;
+				border-style: none;
+				outline: none;
+				.pl(13);
+				.h(38);
+				.w(230);
+				color:@defaultColor;
+				background-color: @inputBgColor;
+				&::-webkit-input-placeholder{
+					color:@defaultColor;
+					.fs(14);
+				}
+			}
+			
+		}
+		.message-wrap{
+			.mt(40);
+			.w(300);
+			.h(40);
+			.lh(40);
+			margin-left: auto;
+			margin-right: auto;
+			.message-box{
+				border-width: none;
+				border-style: none;
+				.pl(10);
+				.h(38);
+				.w(180);
+				background-color: @inputBgColor;
+				&::-webkit-input-placeholder{
+					color:@defaultColor;
+					.fs(14);
+				}
+			}
+			.message{
+				.fs(14);
+				color:@headBgColor;
+				border:1px solid @headBgColor;
+				padding:0 5px;
+			}
+		}
+		button{
+			.h(35);
+			.w(300);
+			font-weight: bold;
+			.fs(22);
+		}
+		.log{
+			background-color: @headBgColor;
+			color:@defaultColor;
+			.mt(60);
+		}
+		.res{
+			.mt(20);
+
+			background-color: @btnBgColor;
+			color:@headBgColor;
+			border:1px solid @headBgColor;
+		}
+	}
+}

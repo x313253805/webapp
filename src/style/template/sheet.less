@@ -1,0 +1,41 @@
+.sheet{
+	position: fixed;
+	left:0;
+	right: 0;
+	bottom:0;
+	top:0;
+	background-color:rgba(0,0,0,.2);
+	z-index: 99;
+	.wrap{
+		color:@sheetColor;
+		position: fixed;
+		left:8px;
+		right: 8px;
+		bottom:8px;
+		z-index:100;
+		li,button{
+			.h(50);
+			.lh(50);
+			.fs(16);
+			background-color: @sheetBgColor;
+			width:100%;
+		}
+		button{
+			.mt(8);
+			border-radius: 5px;
+			color:@sheetColor;
+		}
+		ul{
+			margin:0;
+			padding:0;
+			border-radius: 5px;
+			max-height: 500px;
+			overflow: scroll;
+			li{
+				list-style: none;
+				border-bottom: 1px solid @lineColor;
+			}
+		}
+	}
+}
+

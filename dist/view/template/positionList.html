@@ -6,11 +6,12 @@
 			2017-06-01 11:05
 		</p>
 	</li> -->
-	<li ui-sref="position({id:item.id})" class='item bg-w' ng-repeat="item in data">
+	<li ui-sref="position({id:item.id})" class='item bg-w' ng-repeat="item in data |filterByObj:filterObj">
 		<img class=" f-l logo" ng-src="{{item.imageUrl}}" alt="">
-		<h2 class="title" ng-bind="item.job">销售</h2>
-		<p class="text" ng-bind="item.companyName + '['+item.cityName+']'+''+item.industryName">千度［上海］互联网</p>	
-		<p class="text" ng-bind="item.date">2017-06-01 11:05</p>
+		<h4 class="title" ng-bind="item.job"></h4>
+		<p class="text c-r" ng-bind="item.salaryName"></p>
+		<p class="text" ng-bind="item.companyName + '['+item.cityName+']'+''+item.industryName+' '+item.scaleName"></p>	
+		<p class="text" ng-bind="item.date"></p>
 		<div class="clear"></div>		
 	</li>
 
