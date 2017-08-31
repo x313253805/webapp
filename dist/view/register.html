@@ -1,19 +1,19 @@
 <div class="register ta-c">
-	<form >
-	<div class="form-item ta-l">
+	<form name="form">
+	<div class="form-item ta-l p-r">
 		<span  class="account d-ib ta-l va-m"></span>
-		<input class="d-ib va-m ta-l" type="text" placeholder="设置用户名">
+		<input name="phone" ng-model="user.phone" validator="required,phone" class="d-ib va-m ta-l" type="text" placeholder="设置用户名">
 	</div>
-	<div class="form-item ta-l">
+	<div class="form-item ta-l p-r">
 		<span  class="lock d-ib ta-l va-m"></span>
-		<input class="d-ib va-m ta-l" type="password" placeholder="设置6位以上的密码">
+		<input name="password" ng-model="user.password" validator="required,password" class="d-ib va-m ta-l" type="password" placeholder="设置6位以上的密码">
 	</div>
-	<div class="message-wrap">
-		<input class="message-box f-l" type="text" placeholder="输入验证码">
-		<span class="message f-r">发送短信</span>
+	<div class="message-wrap p-r">
+		<input  name="required" validator="required" ng-model="user.code" class="message-box f-l" type="text" placeholder="输入验证码">
+		<span ng-click="send();" class="message f-r {{time?'disabled':''}}" ng-bind="time?time:'发送短信'"></span>
 	</div>
 		
-		<button class="log">登陆</button>
-		<button class="res">注册</button>
+		<button class="log d-b" ui-sref="login">登陆</button>
+		<button class="res d-b" validation-submit="form" ng-click="submit();">注册</button>
 	</form>
 </div>

@@ -39,13 +39,25 @@
 			input{
 				border-width: none;
 				border-style: none;
+				outline: none;
 				.pl(13);
 				.h(38);
 				.w(230);
 				background-color: @inputBgColor;
+				color:@defaultColor;
 				&::-webkit-input-placeholder{
 					color:@defaultColor;
 					.fs(14);
+				}
+				&.ng-invalid{
+					&+span{
+						position: absolute;
+						color:red;
+						.fs(13);
+						height: 100%;
+						right: 0;
+						top:-10px;
+					}
 				}
 			}
 			
@@ -56,6 +68,7 @@
 			.w(300);
 			font-weight: bold;
 			.fs(22);
+			outline: none;
 		}
 		.log{
 			background-color: @headBgColor;

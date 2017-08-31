@@ -1,11 +1,17 @@
 <div class="me ta-c">
-	<img src="../image/head.png" alt="">
-	<span class="d-b">慕课君</span>
-	<div class="btns">
-		<button ui-sref="favorite">收藏</button>
-		<button ui-sref="post">投递</button>
-		<button class="logout">取消登录</button>
+	<div ng-if="name">
+		<img ng-src={{image}} alt="">
+		<span class="d-b" ng-bind="name"></span>
+		<div class="btns">
+			<button ui-sref="favorite">收藏</button>
+			<button ui-sref="post">投递</button>
+			<button class="logout" ng-click="logout()">取消登录</button>
+		</div>
 	</div>
+	<div ng-hide="name">
+		<button class="login-btn" ui-sref="login">去登陆</button>
+	</div>
+	
 	
 </div>
 <div app-footer></div>

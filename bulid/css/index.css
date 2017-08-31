@@ -43,6 +43,20 @@
 .positionList .item .text {
   margin: 3px 0;
 }
+.positionList .item .icon {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 0.8rem;
+  height: 0.74666667rem;
+  right: 12px;
+  top: 20px;
+}
+.positionList .item .icon.star {
+  background-image: url(../image/star.png);
+}
+.positionList .item .icon.star-active {
+  background-image: url(../image/star-active.png);
+}
 .footer {
   border-top: 1px solid #d4d4d4;
   padding: 0;
@@ -146,8 +160,8 @@
 }
 .tab li {
   font-size: 0.37333333rem;
-  height: 1.06666667rem;
-  line-height: 1.06666667rem;
+  height: 1.01333333rem;
+  line-height: 1.01333333rem;
   width: 33.3%;
   border-bottom: 2px solid #eee;
 }
@@ -237,6 +251,7 @@
 }
 .bottom-btn {
   position: fixed;
+  outline: none;
   bottom: 0;
   left: 0;
   right: 0;
@@ -305,20 +320,31 @@
 .login form .form-item input {
   border-width: none;
   border-style: none;
+  outline: none;
   padding-left: 0.34666667rem;
   height: 1.01333333rem;
   width: 6.13333333rem;
   background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
 }
 .login form .form-item input::-webkit-input-placeholder {
   color: #fff;
   font-size: 0.37333333rem;
+}
+.login form .form-item input.ng-invalid + span {
+  position: absolute;
+  color: red;
+  font-size: 0.34666667rem;
+  height: 100%;
+  right: 0;
+  top: -10px;
 }
 .login form button {
   height: 0.93333333rem;
   width: 8rem;
   font-weight: bold;
   font-size: 0.58666667rem;
+  outline: none;
 }
 .login form .log {
   background-color: #12d5b5;
@@ -386,6 +412,14 @@
   color: #fff;
   font-size: 0.37333333rem;
 }
+.register form .form-item input.ng-invalid + span {
+  position: absolute;
+  color: red;
+  font-size: 0.34666667rem;
+  height: 100%;
+  right: 0;
+  top: -10px;
+}
 .register form .message-wrap {
   margin-top: 1.06666667rem;
   width: 8rem;
@@ -406,16 +440,32 @@
   color: #fff;
   font-size: 0.37333333rem;
 }
+.register form .message-wrap .message-box.ng-invalid + span {
+  position: absolute;
+  color: red;
+  font-size: 0.34666667rem;
+  height: 100%;
+  left: 138px;
+  top: -10px;
+}
 .register form .message-wrap .message {
   font-size: 0.37333333rem;
+  width: 1.6rem;
   color: #12d5b5;
   border: 1px solid #12d5b5;
   padding: 0 5px;
 }
+.register form .message-wrap .message.disabled {
+  color: #fff;
+  border: 1px solid #fff;
+}
 .register form button {
   height: 0.93333333rem;
   width: 8rem;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: bold;
+  border: 1px solid #12d5b5;
   font-size: 0.58666667rem;
 }
 .register form .log {
@@ -427,7 +477,6 @@
   margin-top: 0.53333333rem;
   background-color: rgba(203, 233, 228, 0.5);
   color: #12d5b5;
-  border: 1px solid #12d5b5;
 }
 .me img {
   margin-top: 1.6rem;
@@ -453,6 +502,17 @@
   height: 1.06666667rem;
   margin-top: 0.53333333rem;
   background-color: red;
+}
+.me .login-btn {
+  width: 8rem;
+  height: 1.06666667rem;
+  outline: none;
+  margin-top: 6.93333333rem;
+  background-color: #12d5b5;
+  color: #fff;
+}
+.my-post {
+  margin-top: 1.06666667rem;
 }
 .bg-w {
   background-color: #fff;
